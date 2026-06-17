@@ -1,0 +1,17 @@
+{
+  "name": "jimmy-tools",
+  "owner": {
+    "name": "Jimmynycu"
+  },
+  "metadata": {
+    "description": "Jimmy's Claude Code tools. Token-first plugins that find wasted tokens and keep the signal honest.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "token-efficiency-coach",
+      "source": "./plugins/token-efficiency-coach",
+      "description": "Shows exactly where your AI coding session wasted tokens — and how to fix it. Statusline + SessionEnd hook + on-demand /token-efficiency-coach:coach. Flags waste, never quality. Runs locally."
+    }
+  ]
+}

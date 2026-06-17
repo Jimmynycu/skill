@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="260" viewBox="0 0 880 260" role="img" aria-labelledby="title desc">
+  <title id="title">Token-Efficiency Coach hero banner</title>
+  <desc id="desc">A retro 8-bit style banner on a deep navy panel. On the left, an original pixel-art coach creature stands beside a battery gauge whose charged bars and up-arrow read as recovered efficiency. On the right, the white title TOKEN-EFFICIENCY sits above the teal sub-word COACH, an amber accent bar, a sentence-case tagline, and a token-first spec line.</desc>
+
+  <!-- ===== palette =====
+       navy bg      #0d1b3e -> #0a1430 (subtle gradient)
+       brand teal   #3be0c4   highlight #7af0dd
+       success grn  #54e39b   (savings / good — used only on the gauge)
+       attention    #ffcb3b   (amber accent)
+       ink / white  #0d1b3e / #ffffff   tagline #c3d4f5
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1b3e"/>
+      <stop offset="1" stop-color="#0a1430"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background panel: subtle vertical gradient + one clean teal frame -->
+  <rect x="0" y="0" width="880" height="260" fill="url(#bg)"/>
+  <rect x="5" y="5" width="870" height="250" fill="none" stroke="#3be0c4" stroke-width="3"/>
+
+  <!-- A few restrained pixel dots for retro texture (kept minimal) -->
+  <g fill="#1a2c57">
+    <rect x="40" y="38" width="6" height="6"/>
+    <rect x="828" y="40" width="6" height="6"/>
+    <rect x="826" y="214" width="6" height="6"/>
+  </g>
+
+  <!-- Ground shadow strip under creature -->
+  <rect x="56" y="208" width="176" height="10" fill="#081127"/>
+
+  <!-- ===== COACH CREATURE: original pixel mascot on an 8px grid ===== -->
+  <!-- A friendly rounded blob with one big screen-eye, two antennae, little feet. -->
+  <g shape-rendering="crispEdges">
+    <!-- Antenna stalks -->
+    <rect x="96" y="64" width="8" height="16" fill="#2bb9a3"/>
+    <rect x="160" y="64" width="8" height="16" fill="#2bb9a3"/>
+    <!-- Antenna tips (amber accent) -->
+    <rect x="88" y="56" width="24" height="8" fill="#ffcb3b"/>
+    <rect x="152" y="56" width="24" height="8" fill="#ffcb3b"/>
+
+    <!-- Body: top dome rows + main block (teal) -->
+    <rect x="80" y="80" width="96" height="8" fill="#3be0c4"/>
+    <rect x="72" y="88" width="112" height="8" fill="#3be0c4"/>
+    <rect x="64" y="96" width="128" height="96" fill="#3be0c4"/>
+    <rect x="72" y="192" width="112" height="8" fill="#3be0c4"/>
+
+    <!-- Left-edge highlight (lighter teal) -->
+    <rect x="64" y="96" width="8" height="96" fill="#7af0dd"/>
+    <rect x="72" y="88" width="8" height="8" fill="#7af0dd"/>
+    <rect x="80" y="80" width="8" height="8" fill="#7af0dd"/>
+
+    <!-- Big screen-eye: navy bezel, white plate, navy pupil, glint -->
+    <rect x="88" y="104" width="80" height="56" fill="#0d1b3e"/>
+    <rect x="96" y="112" width="64" height="40" fill="#eef7ff"/>
+    <rect x="120" y="120" width="24" height="24" fill="#0d1b3e"/>
+    <rect x="124" y="124" width="8" height="8" fill="#eef7ff"/>
+
+    <!-- Little smile (navy pixels) -->
+    <rect x="104" y="170" width="8" height="8" fill="#0d1b3e"/>
+    <rect x="112" y="176" width="32" height="8" fill="#0d1b3e"/>
+    <rect x="144" y="170" width="8" height="8" fill="#0d1b3e"/>
+
+    <!-- Feet -->
+    <rect x="80" y="200" width="24" height="8" fill="#2bb9a3"/>
+    <rect x="152" y="200" width="24" height="8" fill="#2bb9a3"/>
+  </g>
+
+  <!-- ===== BATTERY / GAUGE MOTIF: efficiency meter beside creature =====
+       Widened + given an up-arrow glyph so it reads as "recovered headroom",
+       not just a battery. Lit bars use one dedicated success green. -->
+  <g shape-rendering="crispEdges">
+    <!-- Up-arrow glyph above the cell: "more headroom" -->
+    <rect x="220" y="64" width="8" height="8" fill="#54e39b"/>
+    <rect x="212" y="72" width="24" height="8" fill="#54e39b"/>
+    <rect x="220" y="80" width="8" height="8" fill="#54e39b"/>
+
+    <!-- Cap -->
+    <rect x="208" y="92" width="32" height="8" fill="#3be0c4"/>
+    <!-- Shell (wider: 56px) -->
+    <rect x="200" y="100" width="56" height="104" fill="#0d1b3e" stroke="#3be0c4" stroke-width="4"/>
+    <!-- Charge bars (bottom-up): three lit success-green, top one empty -->
+    <rect x="208" y="176" width="40" height="20" fill="#54e39b"/>
+    <rect x="208" y="152" width="40" height="20" fill="#54e39b"/>
+    <rect x="208" y="128" width="40" height="20" fill="#54e39b"/>
+    <rect x="208" y="108" width="40" height="16" fill="#16306b"/>
+  </g>
+
+  <!-- ===== TITLE + TAGLINE (right) — pixel-styled bold monospace =====
+       Shared left edge at x=296. White product name is primary; COACH is a
+       smaller teal sub-lockup so it stops competing with the product name. -->
+  <text x="296" y="100" font-family="'Courier New', monospace" font-size="40" font-weight="bold" letter-spacing="1" fill="#ffffff">TOKEN-EFFICIENCY</text>
+
+  <!-- COACH sub-lockup (34px). The decorative pixel motif was removed: at
+       font-size 34 + letter-spacing 6 the word runs to ~x=422, so the old
+       squares (x=404..440) collided with the 'H' terminal and read as a
+       corrupted glyph. Clean word, no collision. -->
+  <text x="296" y="148" font-family="'Courier New', monospace" font-size="34" font-weight="bold" letter-spacing="6" fill="#3be0c4">COACH</text>
+
+  <!-- Accent underline bar: thicker (8px) and scoped to the real COACH width
+       (x=296 -> ~422) so it reads as a deliberate divider, not a stray rule. -->
+  <rect x="296" y="158" width="128" height="8" fill="#ffcb3b"/>
+
+  <!-- Tagline (sentence case, brighter) + token-first spec line.
+       Sentence case breaks the all-caps stack so hierarchy stays crisp;
+       15px keeps it from out-measuring the COACH accent above. -->
+  <text x="296" y="192" font-family="'Courier New', monospace" font-size="15" font-weight="bold" letter-spacing="0.5" fill="#c3d4f5">Find wasted tokens. Keep the good stuff.</text>
+  <text x="296" y="216" font-family="'Courier New', monospace" font-size="14" font-weight="bold" letter-spacing="1" fill="#3be0c4">CTX TOKENS · CACHE% · RUNS LOCAL</text>
+</svg>

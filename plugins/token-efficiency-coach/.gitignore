@@ -1,0 +1,5 @@
+# Python / tooling artifacts — never part of the shipped plugin.
+__pycache__/
+*.pyc
+.ruff_cache/
+.DS_Store

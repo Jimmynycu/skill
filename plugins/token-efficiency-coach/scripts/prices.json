@@ -1,0 +1,10 @@
+{
+  "_note": "Illustrative reference prices in USD per 1,000,000 tokens. UPDATE these to current provider pricing before trusting the dollar figures. 'cache_read' = discounted cached-input rate; 'cache_write_*' = prompt-cache creation rates (5-minute vs 1-hour TTL).",
+  "_updated": "2026-06-16",
+  "default": { "input": 3.0, "output": 15.0, "cache_read": 0.30, "cache_write_5m": 3.75, "cache_write_1h": 6.0 },
+  "models": {
+    "claude-opus-4-8":   { "input": 15.0, "output": 75.0, "cache_read": 1.50, "cache_write_5m": 18.75, "cache_write_1h": 30.0 },
+    "claude-sonnet-4-6": { "input": 3.0,  "output": 15.0, "cache_read": 0.30, "cache_write_5m": 3.75,  "cache_write_1h": 6.0 },
+    "claude-haiku-4-5":  { "input": 1.0,  "output": 5.0,  "cache_read": 0.10, "cache_write_5m": 1.25,  "cache_write_1h": 2.0 }
+  }
+}

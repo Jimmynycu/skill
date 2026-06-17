@@ -1,0 +1,62 @@
+{
+  "_note": "Waste-pattern catalog = the coach's rules, kept separate from analyzer logic. Each pattern names a metric computed by analyze.py, a comparison, and the coaching message (placeholders in {braces} are filled from the metrics). This coach is token-first - figures are token counts and turns, not dollars. Tune thresholds, edit copy, or add patterns freely.",
+  "patterns": [
+    {
+      "id": "low_cache",
+      "title": "Low prompt-cache hit rate",
+      "severity": "high",
+      "metric": "cache_hit_pct", "op": "<", "threshold": 60,
+      "savings_metric": "max_cache_savings_usd",
+      "message": "Only {cache_hit_pct}% of input context was served from cache. Re-sending uncached context every turn is the #1 token waste. Keep stable context (system prompt, instructions, pinned files) at the FRONT and unchanged so it stays cached; avoid reordering or editing early context mid-session. A cache hit costs about a tenth of a fresh input token, so keeping context stable is the single biggest token saver."
+    },
+    {
+      "id": "context_bloat",
+      "title": "Context bloat",
+      "severity": "high",
+      "metric": "peak_context_tokens", "op": ">", "threshold": 120000,
+      "message": "Peak context reached {peak_context_tokens:,} tokens (avg {avg_context_tokens:,}). Every token in context is re-billed on every later turn, so a heavy context taxes the rest of the session. Compact the conversation, drop stale tool output, or start a fresh thread for each new sub-task."
+    },
+    {
+      "id": "large_tool_output",
+      "title": "Oversized tool output in context",
+      "severity": "medium",
+      "metric": "largest_tool_output_tokens", "op": ">", "threshold": 8000,
+      "message": "A single tool result added ~{largest_tool_output_tokens:,} tokens to context (e.g. a whole-file read or an unbounded command dump). That payload is then re-billed on every following turn. Read targeted line ranges instead of whole files, grep for the lines you need, and pipe noisy commands through head/tail or a filter before they land in context."
+    },
+    {
+      "id": "tool_errors",
+      "title": "Failed tool calls",
+      "severity": "medium",
+      "metric": "tool_error_count", "op": ">", "threshold": 2,
+      "message": "{tool_error_count} tool call(s) returned an error ({tool_error_pct}% of all calls). Each failure still costs a full round-trip — the call, the error, and the retry are all billed, and the error text stays in context. Check paths and command syntax before running, and prefer a quick dry-run over trial-and-error on expensive steps."
+    },
+    {
+      "id": "high_output",
+      "title": "Output-heavy spend",
+      "severity": "medium",
+      "metric": "output_share_pct", "op": ">", "threshold": 45,
+      "message": "Output tokens are {output_share_pct}% of cost, and output is the priciest token class (~5x the input rate). Ask for terser answers, smaller diffs, and 'no preamble' to trim it."
+    },
+    {
+      "id": "single_tier",
+      "title": "Everything on the priciest model",
+      "severity": "medium",
+      "metric": "pct_on_priciest", "op": ">", "threshold": 90,
+      "message": "{pct_on_priciest}% of spend ran on {priciest_model}. Route mechanical steps (renames, greps, boilerplate, file reads) to a cheaper tier and reserve the top model for real reasoning."
+    },
+    {
+      "id": "redundant_reads",
+      "title": "Redundant file reads",
+      "severity": "medium",
+      "metric": "redundant_read_count", "op": ">", "threshold": 0,
+      "message": "Re-read the same file(s) {redundant_read_count} extra time(s); most re-read: {top_reread_file}. Each re-read re-injects the file into context and re-bills it. Read once and keep it, or read targeted line ranges."
+    },
+    {
+      "id": "thread_length",
+      "title": "Very long single thread",
+      "severity": "low",
+      "metric": "n_assistant_msgs", "op": ">", "threshold": 80,
+      "message": "{n_assistant_msgs} assistant turns in one thread. A long thread carries its whole history forward at full cost every turn. Split unrelated work into fresh sessions to shed dead context."
+    }
+  ]
+}
