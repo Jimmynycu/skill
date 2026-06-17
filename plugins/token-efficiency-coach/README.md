@@ -4,8 +4,9 @@ A Claude Code **plugin** that shows exactly where a session wasted tokens — an
 fix it. It runs locally and reads your own session log, so **no prompt ever leaves your
 machine.**
 
-It flags *waste* (uncached context, context bloat, oversized tool output, failed tool
-calls, output-heavy turns, wrong-tier routing, redundant reads), **not** *quality*.
+It flags *waste* (uncached context, context bloat, oversized tool output, output-heavy
+turns, failed tool calls, wrong-tier routing, redundant reads, very long single thread) —
+eight patterns in all, **not** *quality*.
 There is no score, no ranking, no judgment — just "here's what cost you, here's the fix."
 
 The plugin ships three surfaces, all backed by **one engine** (`scripts/analyze.py`):
@@ -20,22 +21,24 @@ The plugin ships three surfaces, all backed by **one engine** (`scripts/analyze.
 
 ## Install
 
-This plugin is distributed through the **`jimmy-tools`** marketplace (the
-`token-efficiency-marketplace/` directory one level up from this plugin).
+This plugin is distributed through the **`jimmy-tools`** marketplace, whose manifest lives
+at the repo root ([`.claude-plugin/marketplace.json`](../../.claude-plugin/marketplace.json)).
 
 ```bash
-# 1) Add the marketplace (local path, or <owner>/<repo> for GitHub)
-claude plugin marketplace add ./token-efficiency-marketplace
+# 1) Add the marketplace from GitHub (registers as: jimmy-tools)
+claude plugin marketplace add Jimmynycu/skill
 
-# 2) Install the plugin
+# 2) Install the plugin from that marketplace
 claude plugin install token-efficiency-coach@jimmy-tools
 ```
 
-Validate before publishing:
+Developing from a local clone instead? Point `marketplace add` at the repo root
+(`claude plugin marketplace add .`), then install the same way.
+
+Validate before publishing (run from the repo root):
 
 ```bash
-claude plugin validate ./token-efficiency-coach --strict
-claude plugin validate ./token-efficiency-marketplace
+claude plugin validate ./plugins/token-efficiency-coach --strict
 ```
 
 The hooks (and the statusline, once wired) execute shell commands, so Claude Code will
@@ -112,7 +115,7 @@ every update. So copy (or symlink) the script to a stable location and point at 
 ```bash
 # Copy the shipped statusline to a stable path (re-copy after a plugin update):
 cp "$(claude plugin path token-efficiency-coach 2>/dev/null || \
-      echo "$HOME/.claude/plugins/cache/token-efficiency-coach@jimmy-tools/1.0.0")/scripts/statusline.py" \
+      echo "$HOME/.claude/plugins/cache/token-efficiency-coach@jimmy-tools/1.0.1")/scripts/statusline.py" \
    "$HOME/.claude/statusline-token-coach.py"
 ```
 

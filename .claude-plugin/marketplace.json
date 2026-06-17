@@ -11,7 +11,9 @@
     {
       "name": "token-efficiency-coach",
       "source": "./plugins/token-efficiency-coach",
-      "description": "Shows exactly where your AI coding session wasted tokens — and how to fix it. Statusline + SessionEnd hook + on-demand /token-efficiency-coach:coach. Flags waste, never quality. Runs locally."
+      "description": "Shows exactly where your AI coding session wasted tokens — and how to fix it. Statusline + SessionEnd hook + on-demand /token-efficiency-coach:coach. Flags waste, never quality. Runs locally.",
+      "category": "cost-optimization",
+      "keywords": ["tokens", "cost", "efficiency", "context", "statusline", "coach", "observability", "llm-cost", "claude-code"]
     }
   ]
 }

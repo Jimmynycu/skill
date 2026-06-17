@@ -8,6 +8,8 @@
   <img alt="Token-first" src="https://img.shields.io/badge/metric-token--first-ffcb3b?style=flat-square">
   <img alt="Tested: live A/B" src="https://img.shields.io/badge/tested-live%20A%2FB-54e39b?style=flat-square">
   <img alt="Runs locally" src="https://img.shields.io/badge/privacy-runs%20locally-3be0c4?style=flat-square">
+  <a href="https://github.com/Jimmynycu/skill/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Jimmynycu/skill?style=flat-square&color=3be0c4"></a>
+  <a href="https://github.com/Jimmynycu/skill/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Jimmynycu/skill?style=flat-square&color=54e39b"></a>
 </p>
 
 <p align="center">
@@ -18,21 +20,39 @@
   It flags <i>waste</i>, never quality. It runs on your machine. It speaks tokens, not dollars.
 </p>
 
+<p align="center">
+  <b>&minus;45% tokens&nbsp;&nbsp;·&nbsp;&nbsp;&minus;44% turns&nbsp;&nbsp;·&nbsp;&nbsp;4/6 → 6/6 correct</b><br>
+  <sub>measured in a live A/B — 6 sessions per arm, 12 total &nbsp;·&nbsp; <a href="#numbers">see the method ↓</a></sub><br>
+  <sub>Runs as an external local engine — <b>zero added context overhead</b> in your own session.</sub>
+</p>
+
+<p align="center">
+  <a href="#install">Install</a> &nbsp;·&nbsp;
+  <a href="#what-it-catches">What it catches</a> &nbsp;·&nbsp;
+  <a href="#numbers">Numbers</a> &nbsp;·&nbsp;
+  <a href="#the-story-in-8-slides">The story</a> &nbsp;·&nbsp;
+  <a href="#how-it-works">How it works</a> &nbsp;·&nbsp;
+  <a href="#faq">FAQ</a>
+</p>
+
 ---
 
-## Quickstart (about a minute)
+## Install
 
-Two commands. The first adds the **`jimmy-tools`** marketplace from this repo (`Jimmynycu/skill`); the second installs the plugin from it. The `@jimmy-tools` handle is the marketplace name declared in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) — copy both lines exactly.
+**About a minute. Two commands.** The first adds the **`jimmy-tools`** marketplace from this repo (`Jimmynycu/skill`); the second installs the plugin from it. The `@jimmy-tools` handle is the marketplace name declared in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) — copy **both** lines exactly.
 
 ```sh
 # 1) add the marketplace (registers as: jimmy-tools)
 claude plugin marketplace add Jimmynycu/skill
+
 # 2) install the plugin from that marketplace
 claude plugin install token-efficiency-coach@jimmy-tools
 ```
 
+Prefer the interactive UI? Run `/plugin marketplace add Jimmynycu/skill`, then `/plugin install token-efficiency-coach@jimmy-tools` — or just `/plugin` and pick it from **Discover**.
+
 > [!NOTE]
-> **What "runs locally" means.** The *coach* does all its analysis on your machine — no session content ever leaves. The **install step above is the exception**: `marketplace add` fetches this repo over the network and may ask you to confirm trusting the marketplace before it registers. Once installed, nothing else phones home.
+> **What "runs locally" means.** The *coach* does all its analysis on your machine — no session content ever leaves. The **install step above is the one exception**: `marketplace add` fetches this repo over the network and may ask you to confirm trusting the marketplace before it registers. Once installed, nothing else phones home.
 
 > [!TIP]
 > **What you get, immediately:** a live token-first statusline (`ctx tokens · cache% · ⚠`), an automatic non-blocking coach that summarizes waste when a session ends, and an on-demand `/token-efficiency-coach:coach` you can run any time.
@@ -43,14 +63,16 @@ That's it. No API keys, no account. The coach reads your local session and talks
 
 ## What it catches
 
-The coach scans a session for **waste** — the tokens you paid for and didn't need. It does **not** grade whether your code or answers were "good." Six things it flags:
+The coach scans a session for **waste** — the tokens you paid for and didn't need. It does **not** grade whether your code or answers were "good." Eight things it flags:
 
 - **Context bloat** — the window quietly ballooning turn over turn
 - **Uncached context** — paying full freight for context that could have been cached
 - **Oversized tool output** — a single tool dumping a wall of tokens into the window
+- **Output-heavy turns** — generation spend that ran hotter than the task needed
 - **Failed tool calls** — errors you paid to send and paid to read
 - **Wrong-tier routing** — a heavyweight model doing featherweight work
 - **Redundant reads** — re-reading the same file the model already has
+- **Very long single thread** — one sprawling session that never compacted or split
 
 > [!NOTE]
 > Every flag is a **token** flag. The coach never says "your code is bad." It says "this part cost more than it had to, here's the cheaper path."
@@ -118,7 +140,7 @@ The whole arc — why I almost killed this project, the experiment, and the one 
 
 <p align="center"><img src="assets/slides/08.png" alt="Come break it: small sample, open method, one-line install." width="62%"></p>
 
-> **8 —** Come break it: small sample, open method — so you can falsify it. Install is one line.
+> **8 —** Come break it: small sample, open method — so you can falsify it. Install is **two commands**.
 
 ---
 
