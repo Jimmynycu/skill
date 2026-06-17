@@ -108,7 +108,29 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ## The story in 8 slides
 
-The whole arc — why I almost killed this project, the experiment, and the one counter‑intuitive fix — as a read‑through carousel. **Scroll the slides below**, or open [the live swipe-through deck](https://jimmynycu.github.io/skill/carousel.html) for the swipe‑through deck (the same one posted on LinkedIn).
+The whole arc — why I almost killed this project, the experiment, and the one counter-intuitive fix. **Swipe the deck, skim the grid, or expand to read full-size:**
+
+<p align="center">
+  <a href="https://jimmynycu.github.io/skill/carousel.html"><b>▶ Open the swipeable deck</b></a> &nbsp;&middot;&nbsp; tap any thumbnail to swipe &nbsp;&middot;&nbsp; or expand the full-size read below
+</p>
+
+<table>
+  <tr>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/01.png" width="160" alt="Slide 1: the hook"></a><br><sub><b>1</b> · The hook</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/02.png" width="160" alt="Slide 2: how I tested"></a><br><sub><b>2</b> · How I tested</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/03.png" width="160" alt="Slide 3: the numbers"></a><br><sub><b>3</b> · The numbers</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/04.png" width="160" alt="Slide 4: the trap"></a><br><sub><b>4</b> · The trap</sub></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/05.png" width="160" alt="Slide 5: the fix"></a><br><sub><b>5</b> · The fix</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/06.png" width="160" alt="Slide 6: coach output"></a><br><sub><b>6</b> · Coach output</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/07.png" width="160" alt="Slide 7: three surfaces"></a><br><sub><b>7</b> · Three surfaces</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/08.png" width="160" alt="Slide 8: install"></a><br><sub><b>8</b> · Install</sub></td>
+  </tr>
+</table>
+
+<details>
+<summary><b>📖 Read all 8 slides full-size</b> (click to expand)</summary>
 
 <p align="center"><img src="assets/slides/01.png" alt="Use fewer tokens. The AI got 44% faster — and started getting the answer wrong." width="62%"></p>
 
@@ -141,6 +163,8 @@ The whole arc — why I almost killed this project, the experiment, and the one 
 <p align="center"><img src="assets/slides/08.png" alt="Come break it: small sample, open method, one-line install." width="62%"></p>
 
 > **8 —** Come break it: small sample, open method — so you can falsify it. Install is **two commands**.
+
+</details>
 
 ---
 
