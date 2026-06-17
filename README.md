@@ -30,7 +30,7 @@
   <a href="#install">Install</a> &nbsp;·&nbsp;
   <a href="#what-it-catches">What it catches</a> &nbsp;·&nbsp;
   <a href="#numbers">Numbers</a> &nbsp;·&nbsp;
-  <a href="#the-story-in-8-slides">The story</a> &nbsp;·&nbsp;
+  <a href="#at-a-glance">At a glance</a> &nbsp;·&nbsp;
   <a href="#how-it-works">How it works</a> &nbsp;·&nbsp;
   <a href="#faq">FAQ</a>
 </p>
@@ -102,20 +102,11 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ---
 
-## The story in 8 slides
+## At a glance
 
-The whole arc, eight beats — **scroll the strip sideways → to move through all of them** (finger-swipe on mobile). No endless scrolling down; prefer fullscreen one-at-a-time? [Open the deck ↗](https://jimmynycu.github.io/token-efficiency/carousel.html).
+<p align="center"><img src="assets/explainer.png" alt="Token-Efficiency Coach, a Claude Code plugin that runs locally. See exactly where your AI coding session wasted tokens and how to fix it. Measured in a live A/B across 12 real sessions: tokens down 45% (133k to 73k per session), turns down 44% (4.5 to 2.5), task correctness up from 4/6 to 6/6. Flags 8 token-waste types across 3 surfaces: a live statusline, an automatic end-of-session coach, and an on-demand command. Install with two commands: claude plugin marketplace add Jimmynycu/token-efficiency, then claude plugin install token-efficiency-coach at jimmy-tools." width="100%"></p>
 
-<table><tr>
-<td align="center" valign="top"><img src="assets/slides/01.png" width="600" alt="The hook: use fewer tokens; faster but wrong"><br><sub><b>1 · The hook</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/02.png" width="600" alt="How I tested: 12 sessions, N=6 per arm"><br><sub><b>2 · How I tested</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/03.png" width="600" alt="The numbers: -45% tokens, -44% turns, 4/6 to 6/6"><br><sub><b>3 · The numbers</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/04.png" width="600" alt="The trap: terse made it eyeball the math, 2 of 6 failed"><br><sub><b>4 · The trap</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/05.png" width="600" alt="The fix: compute exactly, fewest turns"><br><sub><b>5 · The fix</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/06.png" width="600" alt="What the coach prints, token-first"><br><sub><b>6 · Coach output</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/07.png" width="600" alt="Three surfaces, one local engine"><br><sub><b>7 · Three surfaces</b></sub></td>
-<td align="center" valign="top"><img src="assets/slides/08.png" width="600" alt="Come break it; two-command install"><br><sub><b>8 · Install</b></sub></td>
-</tr></table>
+Prefer the full eight-beat walkthrough? [**Open the swipeable deck ↗**](https://jimmynycu.github.io/token-efficiency/carousel.html)
 
 ---
 
