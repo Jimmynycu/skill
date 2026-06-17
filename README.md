@@ -84,6 +84,44 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ---
 
+## The story in 8 slides
+
+The whole arc — why I almost killed this project, the experiment, and the one counter‑intuitive fix — as a read‑through carousel. **Scroll the slides below**, or open [`carousel.html`](carousel.html) for the swipe‑through deck (the same one posted on LinkedIn).
+
+<p align="center"><img src="assets/slides/01.png" alt="Use fewer tokens. The AI got 44% faster — and started getting the answer wrong." width="62%"></p>
+
+> **1 —** "Use fewer tokens." The AI got 44% faster… and started getting the answer **wrong.**
+
+<p align="center"><img src="assets/slides/02.png" alt="How I tested it: 12 real headless Claude Code sessions, one fixed task, N=6 per arm." width="62%"></p>
+
+> **2 —** How I tested it: 12 real headless Claude Code sessions, one fixed task, work held constant, **N = 6 per arm.**
+
+<p align="center"><img src="assets/slides/03.png" alt="The numbers: tokens -45%, turns -44%, correctness 4/6 to 6/6." width="62%"></p>
+
+> **3 —** The numbers: **−45%** tokens, **−44%** turns, and correctness **up** from 4/6 to 6/6.
+
+<p align="center"><img src="assets/slides/04.png" alt="The trap: be terse, skip the checks made it eyeball the arithmetic — 2 of 6 failed." width="62%"></p>
+
+> **4 —** The trap: "be terse, skip the checks" made it **eyeball the arithmetic** instead of computing it — 2 of 6 failed.
+
+<p align="center"><img src="assets/slides/05.png" alt="The fix: compute exactly in the fewest turns — -45% tokens AND 6/6 correct." width="62%"></p>
+
+> **5 —** The fix (the opposite of "say less"): **compute exactly, in the fewest turns** → −45% tokens **and** 6/6 correct.
+
+<p align="center"><img src="assets/slides/06.png" alt="What the coach prints — real output, token-first, flags waste and never grades quality." width="62%"></p>
+
+> **6 —** What the coach actually prints — real output, token‑first. It flags **waste**, never quality.
+
+<p align="center"><img src="assets/slides/07.png" alt="Three surfaces, one local engine: live statusline, auto end-of-session coach, on-demand command." width="62%"></p>
+
+> **7 —** Three surfaces, **one local engine**: live statusline, auto end‑of‑session coach, on‑demand command.
+
+<p align="center"><img src="assets/slides/08.png" alt="Come break it: small sample, open method, one-line install." width="62%"></p>
+
+> **8 —** Come break it: small sample, open method — so you can falsify it. Install is one line.
+
+---
+
 ## How it works
 
 Three surfaces. **One engine.** The same local analyzer powers all of them — so the statusline, the end-of-session note, and the on-demand command always agree.
