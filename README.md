@@ -8,8 +8,8 @@
   <img alt="Token-first" src="https://img.shields.io/badge/metric-token--first-ffcb3b?style=flat-square">
   <img alt="Tested: live A/B" src="https://img.shields.io/badge/tested-live%20A%2FB-54e39b?style=flat-square">
   <img alt="Runs locally" src="https://img.shields.io/badge/privacy-runs%20locally-3be0c4?style=flat-square">
-  <a href="https://github.com/Jimmynycu/skill/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Jimmynycu/skill?style=flat-square&color=3be0c4"></a>
-  <a href="https://github.com/Jimmynycu/skill/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Jimmynycu/skill?style=flat-square&color=54e39b"></a>
+  <a href="https://github.com/Jimmynycu/token-efficiency/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/Jimmynycu/token-efficiency?style=flat-square&color=3be0c4"></a>
+  <a href="https://github.com/Jimmynycu/token-efficiency/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/Jimmynycu/token-efficiency?style=flat-square&color=54e39b"></a>
 </p>
 
 <p align="center">
@@ -39,17 +39,17 @@
 
 ## Install
 
-**About a minute. Two commands.** The first adds the **`jimmy-tools`** marketplace from this repo (`Jimmynycu/skill`); the second installs the plugin from it. The `@jimmy-tools` handle is the marketplace name declared in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) — copy **both** lines exactly.
+**About a minute. Two commands.** The first adds the **`jimmy-tools`** marketplace from this repo (`Jimmynycu/token-efficiency`); the second installs the plugin from it. The `@jimmy-tools` handle is the marketplace name declared in [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) — copy **both** lines exactly.
 
 ```sh
 # 1) add the marketplace (registers as: jimmy-tools)
-claude plugin marketplace add Jimmynycu/skill
+claude plugin marketplace add Jimmynycu/token-efficiency
 
 # 2) install the plugin from that marketplace
 claude plugin install token-efficiency-coach@jimmy-tools
 ```
 
-Prefer the interactive UI? Run `/plugin marketplace add Jimmynycu/skill`, then `/plugin install token-efficiency-coach@jimmy-tools` — or just `/plugin` and pick it from **Discover**.
+Prefer the interactive UI? Run `/plugin marketplace add Jimmynycu/token-efficiency`, then `/plugin install token-efficiency-coach@jimmy-tools` — or just `/plugin` and pick it from **Discover**.
 
 > [!NOTE]
 > **What "runs locally" means.** The *coach* does all its analysis on your machine — no session content ever leaves. The **install step above is the one exception**: `marketplace add` fetches this repo over the network and may ask you to confirm trusting the marketplace before it registers. Once installed, nothing else phones home.
@@ -111,21 +111,21 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 The whole arc — why I almost killed this project, the experiment, and the one counter-intuitive fix. **Swipe the deck, skim the grid, or expand to read full-size:**
 
 <p align="center">
-  <a href="https://jimmynycu.github.io/skill/carousel.html"><b>▶ Open the swipeable deck</b></a> &nbsp;&middot;&nbsp; tap any thumbnail to swipe &nbsp;&middot;&nbsp; or expand the full-size read below
+  <a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><b>▶ Open the swipeable deck</b></a> &nbsp;&middot;&nbsp; tap any thumbnail to swipe &nbsp;&middot;&nbsp; or expand the full-size read below
 </p>
 
 <table>
   <tr>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/01.png" width="160" alt="Slide 1: the hook"></a><br><sub><b>1</b> · The hook</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/02.png" width="160" alt="Slide 2: how I tested"></a><br><sub><b>2</b> · How I tested</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/03.png" width="160" alt="Slide 3: the numbers"></a><br><sub><b>3</b> · The numbers</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/04.png" width="160" alt="Slide 4: the trap"></a><br><sub><b>4</b> · The trap</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/01.png" width="160" alt="Slide 1: the hook"></a><br><sub><b>1</b> · The hook</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/02.png" width="160" alt="Slide 2: how I tested"></a><br><sub><b>2</b> · How I tested</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/03.png" width="160" alt="Slide 3: the numbers"></a><br><sub><b>3</b> · The numbers</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/04.png" width="160" alt="Slide 4: the trap"></a><br><sub><b>4</b> · The trap</sub></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/05.png" width="160" alt="Slide 5: the fix"></a><br><sub><b>5</b> · The fix</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/06.png" width="160" alt="Slide 6: coach output"></a><br><sub><b>6</b> · Coach output</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/07.png" width="160" alt="Slide 7: three surfaces"></a><br><sub><b>7</b> · Three surfaces</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/skill/carousel.html"><img src="assets/slides/08.png" width="160" alt="Slide 8: install"></a><br><sub><b>8</b> · Install</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/05.png" width="160" alt="Slide 5: the fix"></a><br><sub><b>5</b> · The fix</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/06.png" width="160" alt="Slide 6: coach output"></a><br><sub><b>6</b> · Coach output</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/07.png" width="160" alt="Slide 7: three surfaces"></a><br><sub><b>7</b> · Three surfaces</sub></td>
+    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/08.png" width="160" alt="Slide 8: install"></a><br><sub><b>8</b> · Install</sub></td>
   </tr>
 </table>
 

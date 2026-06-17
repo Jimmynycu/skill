@@ -26,7 +26,7 @@ at the repo root ([`.claude-plugin/marketplace.json`](../../.claude-plugin/marke
 
 ```bash
 # 1) Add the marketplace from GitHub (registers as: jimmy-tools)
-claude plugin marketplace add Jimmynycu/skill
+claude plugin marketplace add Jimmynycu/token-efficiency
 
 # 2) Install the plugin from that marketplace
 claude plugin install token-efficiency-coach@jimmy-tools

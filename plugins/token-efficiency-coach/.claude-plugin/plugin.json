@@ -5,8 +5,8 @@
   "version": "1.0.1",
   "description": "Finds where a Claude Code session wasted tokens (uncached context, context bloat, oversized tool output, redundant reads, wrong-tier routing) and coaches the fix. Adds a live cost/context statusline and a non-blocking end-of-session coach.",
   "author": { "name": "Jimmy Liu", "email": "jimmy.liu@homee.ai" },
-  "homepage": "https://github.com/Jimmynycu/skill",
-  "repository": "https://github.com/Jimmynycu/skill",
+  "homepage": "https://github.com/Jimmynycu/token-efficiency",
+  "repository": "https://github.com/Jimmynycu/token-efficiency",
   "license": "MIT",
   "keywords": ["tokens", "cost", "efficiency", "prompt-caching", "context", "coach"]
 }
