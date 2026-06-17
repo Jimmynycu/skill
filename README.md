@@ -83,10 +83,6 @@ The coach scans a session for **waste** — the tokens you paid for and didn't n
 
 We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions total**, one fixed task, the actual work held constant. Coached vs. baseline:
 
-<p align="center">
-  <img src="assets/benchmark.svg" alt="Live A/B results: tokens 133,146 to 72,834 (-45%); turns 4.5 to 2.5 (-44%); correctness 4/6 to 6/6" width="80%">
-</p>
-
 | Metric | Baseline | Coached | Change |
 | --- | ---: | ---: | ---: |
 | Mean tokens / session | 133,146 | 72,834 | **−45%** |
