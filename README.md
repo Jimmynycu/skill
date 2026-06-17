@@ -104,39 +104,18 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ## The story in 8 slides
 
-The whole arc, eight beats. [**▶ Swipe the deck**](https://jimmynycu.github.io/token-efficiency/carousel.html) for the full-screen version — or read straight down.
+The whole arc, eight beats — **scroll the strip sideways → to move through all of them** (finger-swipe on mobile). No endless scrolling down; prefer fullscreen one-at-a-time? [Open the deck ↗](https://jimmynycu.github.io/token-efficiency/carousel.html).
 
-<p align="center"><img src="assets/slides/01.png" alt="The hook: Use fewer tokens. The AI got 44% faster and started getting the answer wrong." width="600"></p>
-
-> **1 · The hook** — "Use fewer tokens." The AI got 44% faster… and started getting the answer **wrong.**
-
-<p align="center"><img src="assets/slides/02.png" alt="How I tested it: 12 real headless Claude Code sessions, one fixed task, N=6 per arm." width="600"></p>
-
-> **2 · How I tested** — 12 real headless Claude Code sessions, one fixed task, work held constant — **N = 6 per arm.**
-
-<p align="center"><img src="assets/slides/03.png" alt="The numbers: tokens -45 percent, turns -44 percent, correctness 4 of 6 to 6 of 6." width="600"></p>
-
-> **3 · The numbers** — **−45%** tokens, **−44%** turns, correctness **up** from 4/6 to 6/6.
-
-<p align="center"><img src="assets/slides/04.png" alt="The trap: be terse skip the checks made it eyeball the arithmetic; 2 of 6 failed." width="600"></p>
-
-> **4 · The trap** — "Be terse, skip the checks" made it **eyeball the arithmetic** — 2 of 6 failed.
-
-<p align="center"><img src="assets/slides/05.png" alt="The fix: compute exactly in the fewest turns; -45 percent tokens AND 6 of 6 correct." width="600"></p>
-
-> **5 · The fix** — the opposite of "say less": **compute exactly, in the fewest turns** → −45% tokens **and** 6/6 correct.
-
-<p align="center"><img src="assets/slides/06.png" alt="What the coach prints: real output, token-first; flags waste, never quality." width="600"></p>
-
-> **6 · Coach output** — what the coach actually prints. Token-first; it flags **waste**, never quality.
-
-<p align="center"><img src="assets/slides/07.png" alt="Three surfaces, one local engine: live statusline, auto end-of-session coach, on-demand command." width="600"></p>
-
-> **7 · Three surfaces** — **one local engine**: live statusline, auto end-of-session note, on-demand command.
-
-<p align="center"><img src="assets/slides/08.png" alt="Come break it: open method, small sample, two-command install." width="600"></p>
-
-> **8 · Come break it** — open method, small sample, so you can falsify it. Install is **two commands**.
+<table><tr>
+<td align="center" valign="top"><img src="assets/slides/01.png" width="600" alt="The hook: use fewer tokens; faster but wrong"><br><sub><b>1 · The hook</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/02.png" width="600" alt="How I tested: 12 sessions, N=6 per arm"><br><sub><b>2 · How I tested</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/03.png" width="600" alt="The numbers: -45% tokens, -44% turns, 4/6 to 6/6"><br><sub><b>3 · The numbers</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/04.png" width="600" alt="The trap: terse made it eyeball the math, 2 of 6 failed"><br><sub><b>4 · The trap</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/05.png" width="600" alt="The fix: compute exactly, fewest turns"><br><sub><b>5 · The fix</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/06.png" width="600" alt="What the coach prints, token-first"><br><sub><b>6 · Coach output</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/07.png" width="600" alt="Three surfaces, one local engine"><br><sub><b>7 · Three surfaces</b></sub></td>
+<td align="center" valign="top"><img src="assets/slides/08.png" width="600" alt="Come break it; two-command install"><br><sub><b>8 · Install</b></sub></td>
+</tr></table>
 
 ---
 
