@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <b>&minus;45% tokens&nbsp;&nbsp;·&nbsp;&nbsp;&minus;44% turns&nbsp;&nbsp;·&nbsp;&nbsp;4/6 → 6/6 correct</b><br>
+  <b>&minus;45%&nbsp;tokens &nbsp;·&nbsp; &minus;44%&nbsp;turns &nbsp;·&nbsp; 4/6&nbsp;→&nbsp;6/6&nbsp;correct</b><br>
   <sub>measured in a live A/B — 6 sessions per arm, 12 total &nbsp;·&nbsp; <a href="#numbers">see the method ↓</a></sub><br>
   <sub>Runs as an external local engine — <b>zero added context overhead</b> in your own session.</sub>
 </p>
@@ -108,61 +108,78 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ## The story in 8 slides
 
-The whole arc — why I almost killed this project, the experiment, and the one counter-intuitive fix. **Swipe the deck, skim the grid, or expand to read full-size:**
+The whole arc — why I almost killed this project, the experiment, and the one counter-intuitive fix. Read the eight beats in ten seconds; the numbers and the slides are right below.
 
 <p align="center">
-  <a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><b>▶ Open the swipeable deck</b></a> &nbsp;&middot;&nbsp; tap any thumbnail to swipe &nbsp;&middot;&nbsp; or expand the full-size read below
+  <a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><b>▶ Open the swipeable deck</b></a>
+  <br><sub>full-screen, one slide at a time — best on mobile</sub>
 </p>
 
-<table>
-  <tr>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/01.png" width="160" alt="Slide 1: the hook"></a><br><sub><b>1</b> · The hook</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/02.png" width="160" alt="Slide 2: how I tested"></a><br><sub><b>2</b> · How I tested</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/03.png" width="160" alt="Slide 3: the numbers"></a><br><sub><b>3</b> · The numbers</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/04.png" width="160" alt="Slide 4: the trap"></a><br><sub><b>4</b> · The trap</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/05.png" width="160" alt="Slide 5: the fix"></a><br><sub><b>5</b> · The fix</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/06.png" width="160" alt="Slide 6: coach output"></a><br><sub><b>6</b> · Coach output</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/07.png" width="160" alt="Slide 7: three surfaces"></a><br><sub><b>7</b> · Three surfaces</sub></td>
-    <td align="center"><a href="https://jimmynycu.github.io/token-efficiency/carousel.html"><img src="assets/slides/08.png" width="160" alt="Slide 8: install"></a><br><sub><b>8</b> · Install</sub></td>
-  </tr>
-</table>
+| # | Beat | What happens |
+| :--: | --- | --- |
+| 1 | **The hook** | "Use fewer tokens." The AI got 44% faster — and started getting the answer **wrong**. |
+| 2 | **How I tested** | 12 real headless Claude Code sessions, one fixed task, work held constant — **N = 6 per arm**. |
+| 3 | **The numbers** | **−45%** tokens, **−44%** turns, correctness **up** from 4/6 to 6/6. |
+| 4 | **The trap** | "Be terse, skip the checks" made it **eyeball the arithmetic** instead of computing it — 2 of 6 failed. |
+| 5 | **The fix** | The opposite of "say less": **compute exactly, in the fewest turns** → −45% tokens **and** 6/6 correct. |
+| 6 | **Coach output** | What the coach actually prints — real, token-first. It flags **waste**, never quality. |
+| 7 | **Three surfaces** | **One local engine**: live statusline, auto end-of-session note, on-demand command. |
+| 8 | **Come break it** | Open method, small sample — so you can falsify it. Install is **two commands**. |
+
+The numbers behind beat 3, from the same live A/B:
+
+<p align="center">
+  <img src="assets/benchmark.svg" alt="Live A/B results across 12 real sessions: tokens 133,146 to 72,834 (-45%); turns 4.5 to 2.5 (-44%); correctness 4/6 to 6/6." width="100%">
+</p>
+
+| Metric | Baseline | Coached | Change |
+| --- | ---: | ---: | ---: |
+| Mean tokens / session | 133,146 | 72,834 | **−45%** |
+| Mean turns / session | 4.5 | 2.5 | **−44%** |
+| Task correctness | 4 / 6 | 6 / 6 | **+2 (4/6 → 6/6)** |
+
+The whole thing turns on beat 5 — here it is full-size:
+
+<p align="center">
+  <img src="assets/slides/05.png" alt="The fix, the opposite of 'say less': compute exactly in the fewest turns gives -45% tokens AND 6/6 correct. Token efficiency only counts if the work still lands." width="92%">
+</p>
 
 <details>
 <summary><b>📖 Read all 8 slides full-size</b> (click to expand)</summary>
 
+<br>
+
 <p align="center"><img src="assets/slides/01.png" alt="Use fewer tokens. The AI got 44% faster — and started getting the answer wrong." width="62%"></p>
 
-> **1 —** "Use fewer tokens." The AI got 44% faster… and started getting the answer **wrong.**
+> **1 —** "Use fewer tokens" made the AI faster — and **wrong.**
 
 <p align="center"><img src="assets/slides/02.png" alt="How I tested it: 12 real headless Claude Code sessions, one fixed task, N=6 per arm." width="62%"></p>
 
-> **2 —** How I tested it: 12 real headless Claude Code sessions, one fixed task, work held constant, **N = 6 per arm.**
+> **2 —** 12 real headless sessions, one fixed task, **N = 6 per arm.**
 
 <p align="center"><img src="assets/slides/03.png" alt="The numbers: tokens -45%, turns -44%, correctness 4/6 to 6/6." width="62%"></p>
 
-> **3 —** The numbers: **−45%** tokens, **−44%** turns, and correctness **up** from 4/6 to 6/6.
+> **3 —** **−45%** tokens, **−44%** turns, correctness **4/6 → 6/6.**
 
 <p align="center"><img src="assets/slides/04.png" alt="The trap: be terse, skip the checks made it eyeball the arithmetic — 2 of 6 failed." width="62%"></p>
 
-> **4 —** The trap: "be terse, skip the checks" made it **eyeball the arithmetic** instead of computing it — 2 of 6 failed.
+> **4 —** "Skip the checks" made it **eyeball the math** — 2 of 6 failed.
 
 <p align="center"><img src="assets/slides/05.png" alt="The fix: compute exactly in the fewest turns — -45% tokens AND 6/6 correct." width="62%"></p>
 
-> **5 —** The fix (the opposite of "say less"): **compute exactly, in the fewest turns** → −45% tokens **and** 6/6 correct.
+> **5 —** **Compute exactly, fewest turns** → −45% tokens **and** 6/6 correct.
 
 <p align="center"><img src="assets/slides/06.png" alt="What the coach prints — real output, token-first, flags waste and never grades quality." width="62%"></p>
 
-> **6 —** What the coach actually prints — real output, token‑first. It flags **waste**, never quality.
+> **6 —** What the coach prints — token-first. It flags **waste**, never quality.
 
 <p align="center"><img src="assets/slides/07.png" alt="Three surfaces, one local engine: live statusline, auto end-of-session coach, on-demand command." width="62%"></p>
 
-> **7 —** Three surfaces, **one local engine**: live statusline, auto end‑of‑session coach, on‑demand command.
+> **7 —** Three surfaces, **one local engine.**
 
 <p align="center"><img src="assets/slides/08.png" alt="Come break it: small sample, open method, one-line install." width="62%"></p>
 
-> **8 —** Come break it: small sample, open method — so you can falsify it. Install is **two commands**.
+> **8 —** Open method, **two-command** install — come break it.
 
 </details>
 
