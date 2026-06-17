@@ -108,7 +108,7 @@ We ran a live A/B: **6 sessions per arm, 12 real headless `claude` sessions tota
 
 ## The story in 8 slides
 
-The whole arc — why I almost killed this project, the experiment, and the one counter‑intuitive fix — as a read‑through carousel. **Scroll the slides below**, or open [`carousel.html`](carousel.html) for the swipe‑through deck (the same one posted on LinkedIn).
+The whole arc — why I almost killed this project, the experiment, and the one counter‑intuitive fix — as a read‑through carousel. **Scroll the slides below**, or open [the live swipe-through deck](https://jimmynycu.github.io/skill/carousel.html) for the swipe‑through deck (the same one posted on LinkedIn).
 
 <p align="center"><img src="assets/slides/01.png" alt="Use fewer tokens. The AI got 44% faster — and started getting the answer wrong." width="62%"></p>
 
